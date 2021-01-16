@@ -106,3 +106,15 @@ body {
 .unemployed {
   font-size: 1.35rem;
 }
+
+.column {
+  display: inline-block;
+  width: 14.28%;
+  padding: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

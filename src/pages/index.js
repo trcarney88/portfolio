@@ -1,15 +1,14 @@
-import React, { useContext } from "react"
+import React from "react"
 import { graphql } from "gatsby"
-import ThemeContext from "../utils/theme"
 import { PageLayout } from "../components"
 import { SEO } from "../utils"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Skills from "../components/Skills"
 
 
 export default ({ data }) => {
   const { firstName, lastName, occupation } = data.site.siteMetadata
-  const { dark } = useContext(ThemeContext)
   return (
     <PageLayout>
       <SEO title="Home" />
@@ -74,6 +73,7 @@ export default ({ data }) => {
           </a>
         </div>
       </Container>
+      <Skills/>
     </PageLayout>
   )
 }
