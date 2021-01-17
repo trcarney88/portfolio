@@ -3,7 +3,12 @@ import Img from "gatsby-image"
 import { Container, Row, Col, Badge } from "react-bootstrap"
 
 const CompanyCard = ({ frontmatter, image }) => {
-  const { company, position, startDate, endDate, location } = frontmatter
+  let { company, position, startDate, endDate, location } = frontmatter
+  
+  if (endDate === null){
+    endDate = "Present"
+  }
+
   return (
     <Container fluid className="m-auto work-history">
       <Img
@@ -19,7 +24,7 @@ const CompanyCard = ({ frontmatter, image }) => {
         <h5 className="text-muted">{location}</h5>
         <h4 className="mt-2">{position}</h4>
         <h5 className="text-muted mt-2">
-          {startDate}-{endDate}
+          {startDate} - {endDate}
         </h5>
       </div>
     </Container>
