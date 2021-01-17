@@ -27,6 +27,7 @@ $themes: (
     file: $dark-blue,
     iconBackground: $white,
     cardBackground: $white,
+    timeline: #ECECEC
   ),
   dark: (
     backgroundColor: #222,
@@ -38,7 +39,7 @@ $themes: (
     firstName: $gray-100,
     lastName: $dark-blue,
     titleColor: $white,
-    hrefColor: $faded-red,
+    hrefColor: $dark-blue,
     themeColor: $dark-red,
     heartColor: pink,
     github: White,
@@ -49,6 +50,7 @@ $themes: (
     file: $dark-blue,
     iconBackground: $black,
     cardBackground: $dark-gray,
+    timeline: #3D3D3D
   ),
 );
 
@@ -199,5 +201,29 @@ div {
 p {
   @include themify($themes) {
     color: themed("textColor");
+  }
+}
+
+.content {
+  @include themify($themes) {
+    background-color: themed("timeline");
+  }
+}
+
+.timeline::after {
+  @include themify($themes) {
+    background-color: themed("timeline");
+  }
+}
+
+.left::before {
+  @include themify($themes) {
+    border-color: transparent transparent transparent themed("timeline");
+  }
+}
+
+.right::before {
+  @include themify($themes) {
+    border-color: transparent themed("timeline") transparent transparent;
   }
 }
