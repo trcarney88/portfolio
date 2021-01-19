@@ -27,7 +27,10 @@ $themes: (
     file: $dark-blue,
     iconBackground: $white,
     cardBackground: $white,
-    timeline: #ECECEC
+    timeline: #ECECEC,
+    logo-t: $black,
+    logo-r: $dark-blue,
+    logo-c: $black
   ),
   dark: (
     backgroundColor: #222,
@@ -50,7 +53,10 @@ $themes: (
     file: $dark-blue,
     iconBackground: $black,
     cardBackground: $dark-gray,
-    timeline: #3D3D3D
+    timeline: #3D3D3D,
+    logo-t: $dark-blue,
+    logo-r: $white,
+    logo-c: $dark-blue
   ),
 );
 
@@ -225,5 +231,23 @@ p {
 .right::before {
   @include themify($themes) {
     border-color: transparent themed("timeline") transparent transparent;
+  }
+}
+
+.logo-t {
+  @include themify($themes) {
+    color: themed("logo-t");
+  }
+}
+
+.logo-r {
+  @include themify($themes) {
+    color: themed("logo-r");
+  }
+}
+
+.logo-c {
+  @include themify($themes) {
+    color: themed("logo-c");
   }
 }
