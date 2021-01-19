@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 import "./Fontawesome.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-// TODO: Change Icon to my own Icon
 export default () => {
   const { dark, toggleDark, toString } = useContext(ThemeContext)
   return (
