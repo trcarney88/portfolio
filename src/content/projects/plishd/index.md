@@ -1,5 +1,6 @@
 ---
 title: "Plishd - The Work Accomplishment Tracking App"
+description: "Work Accomplishment Tracking App"
 tags: ["Python", "Django", "SQL", "AWS", "Lambda Functions", "Step-Functions"]
 date: "2020-08-09"
 ---
