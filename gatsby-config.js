@@ -35,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Todd Carney's Personal Site`,
-        short_name: `T Carney`,
+        name: `Personal Site for Todd Carney`,
+        short_name: `trcarney`,
         description: `This is my personal site.`,
         start_url: `/`,
         background_color: `#fff`,
