@@ -31,34 +31,55 @@ const CompanyCard = ({ frontmatter, image }) => {
   )
 }
 
-export default ({ html, frontmatter, image }) => {
+export default ({ html, frontmatter, image, windowWidth }) => {
+  let component;
+  if (windowWidth > 750) {
+    component = 
+      <Container className="p-1 project-link text-center">
+        <Row>
+          <Col className="col-md-4 col-12">
+            <CompanyCard frontmatter={frontmatter} image={image} />
+          </Col>
+          <Col className="col-md-8 col-12">
+            <p
+              className="text-justify mt-2"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="col-md-4 col-1"></Col>
+          <Col className="col-md-8 col-1">
+            <div className="d-inline-flex">
+              {frontmatter.tags.map(tag => (
+                <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
+                  <h4>
+                    <small>{tag}</small>
+                  </h4>
+                </Badge>
+              ))}
+            </div>
+          </Col>
+        </Row>
+      </Container>
+  }
+  else {
+    component = 
+      <Container className="p-1 project-link text-center">
+        <Row>
+          <Col className="col-md-4 col-12">
+            <CompanyCard frontmatter={frontmatter} image={image} />
+          </Col>
+          <Col className="col-md-8 col-12">
+            <p
+              className="text-justify mt-2"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </Col>
+        </Row>
+      </Container>
+  }
   return (
-    <Container className="p-1 project-link text-center">
-      <Row>
-        <Col className="col-md-4 col-12">
-          <CompanyCard frontmatter={frontmatter} image={image} />
-        </Col>
-        <Col className="col-md-8 col-12">
-          <p
-            className="text-justify mt-2"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col className="col-md-4 col-1"></Col>
-        <Col className="col-md-8 col-1">
-          <div className="d-inline-flex">
-            {frontmatter.tags.map(tag => (
-              <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
-                <h4>
-                  <small>{tag}</small>
-                </h4>
-              </Badge>
-            ))}
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    component
   )
 }
