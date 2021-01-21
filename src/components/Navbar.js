@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 export default ({windoWidth}) => {
   const { dark, toggleDark, toString } = useContext(ThemeContext)
   let component;
-  if (windoWidth > 750) {
+  if (windowWidth > 750) {
     component =
       <Navbar variant={toString()} fixed="top" collapseOnSelect expand="md">
         <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
