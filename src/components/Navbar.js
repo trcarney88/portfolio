@@ -5,9 +5,10 @@ import { Link } from "gatsby"
 import "./Fontawesome.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default ({windoWidth}) => {
+export default ({windowWidth}) => {
   const { dark, toggleDark, toString } = useContext(ThemeContext)
   let component;
+  
   if (windowWidth > 750) {
     component =
       <Navbar variant={toString()} fixed="top" collapseOnSelect expand="md">
