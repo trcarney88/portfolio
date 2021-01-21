@@ -76,7 +76,7 @@ export default ({ data }) => {
             </a>
           </div>
         </Container>
-        <Skills/>
+        <Skills windowWidth={windowWidth}/>
       </PageLayout>
   }
   else {
