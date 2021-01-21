@@ -1,12 +1,17 @@
 import React from "react"
 
-export default ({title, body, side}) => {
+export default ({title, body, side, mobile}) => {
     let c;
     if (side==="left"){
         c = "timeline-container left"
     }
     else {
-        c = "timeline-container right"
+        if (mobile === "True") {
+            c = "mobile-timeline-container right"
+        }
+        else {
+            c = "timeline-container right"
+        }
     }
     return (
        <div className={c}>

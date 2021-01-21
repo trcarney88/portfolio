@@ -9,7 +9,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-display: swap;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   // font-size: calc(16px * ((80vw - 700px) / (1600 - 400)));
   // line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
 }
@@ -114,6 +114,16 @@ body {
   padding: 15px;
 }
 
+.mobile-column-3 {
+  display: inline-block;
+  width: 33.33%;
+}
+
+.mobile-column-4 {
+  display: inline-block;
+  width: 25%;
+}
+
 .row::after {
   content: "";
   clear: both;
@@ -145,20 +155,12 @@ padding: 10px 40px;
 position: relative;
 width: 50%;
 }
-  
-/* The circles on the timeline */
-.container::after {
-content: '';
-position: absolute;
-width: 25px;
-height: 25px;
-right: -17px;
-background-color: white;
-border: 4px solid #FF9F55;
-top: 15px;
-border-radius: 50%;
-z-index: 1;
-}
+
+.mobile-timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  width: 100%;
+  }
   
 /* Place the container to the left */
 .left {

@@ -1,15 +1,16 @@
-import React from "react"
+import React, { useContext } from "react"
 import { PageLayout, PageTitle } from "../components"
-import { SEO } from "../utils"
+import { SEO, ThemeContext } from "../utils"
 import Timeline from "../components/Timeline"
 
 export default () => {
-  
+  const { windowWidth } = useContext(ThemeContext)
+
   return (
     <PageLayout>
       <SEO title="My History" />
       <PageTitle title="My History" />
-      <Timeline/>
+      <Timeline windowWidth={windowWidth}/>
     </PageLayout>
   )
 }

@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { PageLayout, PageTitle, ProjectLink } from "../components"
-import { SEO, Utils } from "../utils"
+import { SEO, ThemeContext, Utils } from "../utils"
 import Container from "react-bootstrap/Container"
 
 export default ({ data }) => {
@@ -9,28 +9,58 @@ export default ({ data }) => {
   const allFeaturedImages = data.allFile.edges || []
   const regex = /\/[projects].*\/|$/
   const featuredImageMap = Utils.getImageMap(allFeaturedImages, regex, true, 3)
+  const { windowWidth } = useContext(ThemeContext)
 
+  let component
+  if (windowWidth > 750) {
+    component = 
+      <PageLayout>
+        <SEO title="Projects" />
+        <PageTitle title="Projects" />
+        <Container className="text-left">
+          <section>
+            {allProjects.map(({ node }) => (
+              <div key={node.id} className="p-3">
+                <ProjectLink
+                  to={node.fields.slug}
+                  featuredImages={featuredImageMap[node.fields.slug]}
+                  title={node.frontmatter.title}
+                  tags={node.frontmatter.tags}
+                  excerpt={node.excerpt}
+                />
+                <hr />
+              </div>
+            ))}
+          </section>
+        </Container>
+      </PageLayout>
+  }
+  else {
+    component =
+      <PageLayout>
+        <SEO title="Projects" />
+        <PageTitle title="Projects" />
+        <Container className="text-left p-0 m-0">
+          <section>
+            {allProjects.map(({ node }) => (
+              <div key={node.id} className="p-3">
+                <ProjectLink
+                  to={node.fields.slug}
+                  featuredImages={featuredImageMap[node.fields.slug]}
+                  title={node.frontmatter.title}
+                  tags={node.frontmatter.tags}
+                  excerpt={node.excerpt}
+                  windowWidth = {windowWidth}
+                />
+                <hr />
+              </div>
+            ))}
+          </section>
+        </Container>
+      </PageLayout>
+  }
   return (
-    <PageLayout>
-      <SEO title="Projects" />
-      <PageTitle title="Projects" />
-      <Container className="text-left">
-        <section>
-          {allProjects.map(({ node }) => (
-            <div key={node.id} className="p-3">
-              <ProjectLink
-                to={node.fields.slug}
-                featuredImages={featuredImageMap[node.fields.slug]}
-                title={node.frontmatter.title}
-                tags={node.frontmatter.tags}
-                excerpt={node.excerpt}
-              />
-              <hr />
-            </div>
-          ))}
-        </section>
-      </Container>
-    </PageLayout>
+    component
   )
 }
 
