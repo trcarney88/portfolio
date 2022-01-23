@@ -1,10 +1,11 @@
-import React, { useContext } from "react"
+import React from "react";
+import { useContext } from "react";
 import { graphql } from "gatsby"
 import { PageLayout, PageTitle, ProjectLink } from "../components"
-import { SEO, ThemeContext, Utils } from "../utils"
+import { Seo, ThemeContext, Utils } from "../utils"
 import Container from "react-bootstrap/Container"
 
-export default ({ data }) => {
+const Projects =  ({ data }) => {
   const allProjects = data.allMarkdownRemark.edges || []
   const allFeaturedImages = data.allFile.edges || []
   const regex = /\/[projects].*\/|$/
@@ -15,7 +16,7 @@ export default ({ data }) => {
   if (windowWidth > 750) {
     component = 
       <PageLayout>
-        <SEO title="Projects" />
+        <Seo title="Projects" />
         <PageTitle title="Projects" />
         <Container className="text-left">
           <section>
@@ -38,7 +39,7 @@ export default ({ data }) => {
   else {
     component =
       <PageLayout>
-        <SEO title="Projects" />
+        <Seo title="Projects" />
         <PageTitle title="Projects" />
         <Container className="text-left p-0 m-0">
           <section>
@@ -63,6 +64,7 @@ export default ({ data }) => {
     component
   )
 }
+export default Projects;
 
 export const query = graphql`
   query {

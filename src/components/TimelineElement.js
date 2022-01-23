@@ -1,6 +1,6 @@
 import React from "react"
 
-export default ({title, body, side, mobile}) => {
+const TimelineElement = ({title, body, side, mobile}) => {
     let c;
     if (side==="left"){
         c = "timeline-container left"
@@ -22,3 +22,5 @@ export default ({title, body, side, mobile}) => {
         </div>
     )
 }
+
+export default TimelineElement;

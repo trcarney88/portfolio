@@ -1,11 +1,11 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { PageLayout, PageTitle, WorkHistory } from "../components"
-import { SEO, ThemeContext, Utils } from "../utils"
+import { Seo, ThemeContext, Utils } from "../utils"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Container from "react-bootstrap/Container"
 
-export default ({ data }) => {
+const ResumePage = ({ data }) => {
   const history = data.allMarkdownRemark.edges || []
   const images = data.allFile.edges || []
   const imageMap = Utils.getImageMap(images, /\/[work].*\/|$/)
@@ -16,7 +16,7 @@ export default ({ data }) => {
   if (windowWidth > 750) {
     component =
       <PageLayout>
-        <SEO title="Resume" />
+        <Seo title="Resume" />
         <PageTitle title="Resume">
           &nbsp;
           <a href="../../resume.pdf" target="_blank">
@@ -45,7 +45,7 @@ export default ({ data }) => {
   else {
     component = 
     <PageLayout>
-      <SEO title="Resume" />
+      <Seo title="Resume" />
       <PageTitle title="Resume">
         &nbsp;
         <a href="../../resume.pdf" target="_blank">
@@ -120,3 +120,5 @@ export const query = graphql`
     }
   }
 `
+
+export default ResumePage;

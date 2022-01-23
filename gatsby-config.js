@@ -19,7 +19,6 @@ module.exports = {
     unemployed: true,
   },
   plugins: [
-    `gatsby-plugin-preload-link-crossorigin`,
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,

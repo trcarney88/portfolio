@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-export default () => {
+const Footer = () => {
   const { author } = useStaticQuery(query).site.siteMetadata
   return (
     <div className="footer text-muted text-center">
@@ -13,6 +13,7 @@ export default () => {
     </div>
   )
 }
+
 const query = graphql`
   query Author {
     site {
@@ -22,3 +23,5 @@ const query = graphql`
     }
   }
 `
+
+export default Footer;

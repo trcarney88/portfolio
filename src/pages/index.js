@@ -1,21 +1,21 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { PageLayout } from "../components"
-import { SEO, ThemeContext } from "../utils"
+import { Seo, ThemeContext } from "../utils"
 import { Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Skills from "../components/Skills"
 
 
-export default ({ data }) => {
+const IndexPage =  ({ data }) => {
   const { firstName, lastName, occupation } = data.site.siteMetadata
-  const { dark, windowWidth } = useContext(ThemeContext)
+  const { windowWidth } = useContext(ThemeContext)
   let component;
   if (windowWidth > 750) {
     console.log("Desktop Version")
     component = 
       <PageLayout>
-        <SEO title="Home" />
+        <Seo title="Home" />
         <Container className="text-center pt-5 mt-5 vw-100" fluid>
           <Container className="py-0 my-0 vw-100">
             <h1
@@ -83,7 +83,7 @@ export default ({ data }) => {
     console.log("Mobile Version")
     component = 
       <PageLayout>
-        <SEO title="Home" />
+        <Seo title="Home" />
         <Container className="text-center px-0 mx-0 pt-5 mt-5 vw-100" fluid>
           <Container className="p-0 m-0">
             <h1
@@ -164,3 +164,5 @@ export const query = graphql`
     }
   }
 `
+
+export default IndexPage;

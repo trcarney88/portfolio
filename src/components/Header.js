@@ -2,7 +2,7 @@ import React from "react"
 import { Container } from "react-bootstrap"
 import Navbar from "./Navbar"
 
-export default ({windowWidth}) => {
+const Header = ({windowWidth}) => {
   
   return(
     <Container fluid className="px-0">
@@ -10,3 +10,5 @@ export default ({windowWidth}) => {
     </Container>
   )
 }
+
+export default Header;
