@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { Container, Badge, Col, Row } from "react-bootstrap"
 
-export default ({ excerpt, featuredImages, tags, title, to, windowWidth }) => {
+const ProjectLink = ({ excerpt, featuredImages, tags, title, to, windowWidth }) => {
   let component
   if (windowWidth > 750) {
     component = 
@@ -53,3 +53,5 @@ export default ({ excerpt, featuredImages, tags, title, to, windowWidth }) => {
     component
   )
 }
+
+export default ProjectLink;

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import "./Fontawesome.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default ({windowWidth}) => {
+const NavBar = ({windowWidth}) => {
   const { dark, toggleDark, toString } = useContext(ThemeContext)
   let component;
   
@@ -91,3 +91,5 @@ export default ({windowWidth}) => {
     component
   )
 }
+
+export default NavBar;

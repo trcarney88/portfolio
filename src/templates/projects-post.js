@@ -13,7 +13,7 @@ const SubTitle = ({ tags }) => (
   </div>
 )
 
-export default ({ data }) => {
+const ProjectsPost = ({ data }) => {
   const post = data.markdownRemark
   return (
     <PostTemplate
@@ -37,3 +37,5 @@ export const query = graphql`
     }
   }
 `
+
+export default ProjectsPost;

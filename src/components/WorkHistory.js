@@ -31,7 +31,7 @@ const CompanyCard = ({ frontmatter, image }) => {
   )
 }
 
-export default ({ html, frontmatter, image, windowWidth }) => {
+const WorkHistory = ({ html, frontmatter, image, windowWidth }) => {
   let component;
   if (windowWidth > 750) {
     component = 
@@ -83,3 +83,5 @@ export default ({ html, frontmatter, image, windowWidth }) => {
     component
   )
 }
+
+export default WorkHistory;

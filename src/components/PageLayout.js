@@ -4,7 +4,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import { ThemeContext } from "../utils"
 
-export default ({ children }) => {
+const PageLayout = ({ children }) => {
   const { dark, windowWidth } = useContext(ThemeContext);
 
   return(
@@ -17,3 +17,5 @@ export default ({ children }) => {
     </Container>
   )
 }
+
+export default PageLayout;

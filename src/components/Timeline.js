@@ -2,7 +2,7 @@ import React from "react"
 import TimelineElement from "./TimelineElement"
 import long from "../content/timeline/long.json"
 
-export default ({windowWidth}) => {
+const Timeline = ({windowWidth}) => {
     const longList = long.items
     let elements = []
     let component;
@@ -30,3 +30,5 @@ export default ({windowWidth}) => {
         </div>
     )
 }
+
+export default Timeline;

@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Image } from "react-bootstrap"
 
-export default ({windowWidth}) => {
+const Skills = ({windowWidth}) => {
     let component;
     if (windowWidth > 750) {
         component = 
@@ -153,3 +153,5 @@ export default ({windowWidth}) => {
         component
     )
 }
+
+export default Skills;
