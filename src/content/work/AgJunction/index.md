@@ -4,6 +4,7 @@ location: "Scottsdale, AZ"
 position: "Embedded Software Engineer"
 tags: ["C++", "Yocto Linux", "Docker", "Python", "Agile", "Git"]
 startDate: "2019-09-16"
+endDate: "2021-03-07"
 ---
 
 Software Lead for the Polaris Project.  Polaris is the name for the project that will build the software and controls platform for all future projects at Agjunction. The platform is a Yocto Linux based application platform where each process is run in a docker container.</p>
