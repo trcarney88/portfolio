@@ -3,7 +3,6 @@ import ThemeContext from "../utils/theme"
 import { Navbar, Nav, Form } from "react-bootstrap"
 import { Link } from "gatsby"
 import "./Fontawesome.js"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const NavBar = ({windowWidth}) => {
   const { dark, toggleDark, toString } = useContext(ThemeContext)
@@ -13,11 +12,13 @@ const NavBar = ({windowWidth}) => {
     component =
       <Navbar variant={toString()} fixed="top" collapseOnSelect expand="md">
         <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
-          <p>
-            <b className="logo logo-t">T</b>
-            <b className="logo logo-r">R</b>
-            <b className="logo logo-c">C</b>
-          </p>
+          <div class="p-3">
+            <p>
+              <b className="logo logo-t">T</b>
+              <b className="logo logo-r">R</b>
+              <b className="logo logo-c">C</b>
+            </p>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
@@ -52,11 +53,13 @@ const NavBar = ({windowWidth}) => {
     component =
       <Navbar variant={toString()} fixed="top" collapseOnSelect expand="md" className="vw-100">
         <Navbar.Brand className="pl-0 ml-0" as={Link} to="/">
-          <p>
-            <b className="logo logo-t">T</b>
-            <b className="logo logo-r">R</b>
-            <b className="logo logo-c">C</b>
-          </p>
+          <div class="p-3">
+            <p>
+              <b className="logo logo-t">T</b>
+              <b className="logo logo-r">R</b>
+              <b className="logo logo-c">C</b>
+            </p>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
