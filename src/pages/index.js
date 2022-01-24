@@ -32,7 +32,6 @@ const IndexPage =  ({ data }) => {
               </i>
             </p>
           </Container>
-          <hr className="my-3 w-25" />
           <div className="d-md-inline-flex icons-container">
             <a
               href="https://github.com/trcarney88"

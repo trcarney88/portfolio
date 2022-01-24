@@ -42,7 +42,7 @@ const WorkHistory = ({ html, frontmatter, image, windowWidth }) => {
           </Col>
           <Col className="col-md-8 col-12">
             <p
-              className="text-justify mt-2"
+              className="mt-2 markDownText"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </Col>
@@ -54,7 +54,7 @@ const WorkHistory = ({ html, frontmatter, image, windowWidth }) => {
               {frontmatter.tags.map(tag => (
                 <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
                   <h4>
-                    <small>{tag}</small>
+                    <small class="workTag">{tag}</small>
                   </h4>
                 </Badge>
               ))}
@@ -72,7 +72,7 @@ const WorkHistory = ({ html, frontmatter, image, windowWidth }) => {
           </Col>
           <Col className="col-md-8 col-12">
             <p
-              className="text-justify mt-2"
+              className="markDowntext mt-2"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </Col>
