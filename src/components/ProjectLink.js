@@ -24,7 +24,7 @@ const ProjectLink = ({ excerpt, featuredImages, tags, title, to, windowWidth }) 
             {tag}
           </Badge>
         ))}
-        <p className="pt-3 text-justify">{excerpt}</p>
+        <p className="pt-3 markDownText">{excerpt}</p>
       </Container>
   }
   else {

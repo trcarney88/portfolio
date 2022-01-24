@@ -17,7 +17,7 @@ const TimelineElement = ({title, body, side, mobile}) => {
        <div className={c}>
             <div className="content">
                 <h2>{title}</h2>
-                <p>{body}</p>
+                <p class="markDownText">{body}</p>
             </div>
         </div>
     )
