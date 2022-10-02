@@ -50,9 +50,9 @@ const WorkHistory = ({ html, frontmatter, image, windowWidth }) => {
         <Row>
           <Col className="col-md-4 col-1"></Col>
           <Col className="col-md-8 col-1">
-            <div className="d-inline-flex">
+            <div className="d-inline-block">
               {frontmatter.tags.map(tag => (
-                <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
+                <Badge key={tag} pill className="mr-2 p-0 m-1 px-3 resume-tags">
                   <h4>
                     <small class="workTag">{tag}</small>
                   </h4>

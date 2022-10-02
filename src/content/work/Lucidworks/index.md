@@ -2,16 +2,34 @@
 company: "Lucidworks"
 location: "San Fransisco, CA"
 position: "Software Engineer, Cloud Platform"
-tags: ["Java", "Springboot", "Kubernetes", "Docker", "GCP", "Terraform", "GCP", "Javascript"]
+tags:
+  [
+    "Java",
+    "Springboot",
+    "Kubernetes",
+    "Docker",
+    "GCP",
+    "Terraform",
+    "Javascript",
+  ]
 startDate: "2021-11-08"
+endDate: "2022-09-15"
 ---
 
-At Lucidworks, I work as a Software Engineer on the Cloud Platform team, we are building the platform
-Lucidworks' new SaaS application, [Springboard](https://lucidworks.com/products/connected-search/).
-Springboard is a collection of Springboot applications that run on Kubernetes clusters hosted on GCP.
-On the platform team, we are responsible for auto scaling compute resources, the core API,
-databases, authentication and authorization, etc.
- 
-Springboard is a Search as a Service Platform. It quickly allows our customers to integrate high
-quality machine learning based search into their websites. Springboard is a very new applications
-and the whole lucidworks team is working to add new features as we bring this product to market.
+At Lucidworks, I worked as a Software Engineer on the Identity and State Management team, we were
+responsible for the Authentication and Authorization and the state management for Lucidworks' new
+SaaS application, [Springboard](https://lucidworks.com/products/connected-search/). Springboard is a
+collection of Springboot applications that run on a Kubernetes clusters hosted on GCP.
+
+Springboard is a Search as a Service Platform. It quickly allows their customers to integrate high
+quality machine learning based search into their websites.
+
+For authentication and authorization, we used Okta to handle authentication and generate a JWT for
+the users session. We would then verify the JWT against Okta to ensure a request was authorized.
+To do the authorization, we leveraged the Spring Security library. WE would also use custom
+claims to pass information about the user to our system for the in-house analytics.
+
+To handle state management, the Identity and State Management team created a service to be the
+single source of truth for the entire Kubernetes based backend. To accomplish this our service would
+consume all Pub/Sub messages produced in the system and store them in a Firestore database. The
+service also had the ability to replay sagas to help reconcile the state of a disrupted service.
