@@ -1,7 +1,7 @@
 ---
 company: "Lucidworks"
 location: "San Fransisco, CA"
-position: "Software Engineer, Cloud Platform"
+position: "Sr. Software Engineer, Cloud"
 tags:
   [
     "Java",
