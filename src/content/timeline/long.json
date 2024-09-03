@@ -1,88 +1,96 @@
 {
-    "items": [
-        {
-            "title": "May 2006",
-            "body": "Graduated from Moberly High School in Moberly, MO"
-        },
-        {
-            "title": "August 2006",
-            "body": "Started college at Missouri State University. I started out majoring in Chemistry then quickly changed my major to Antiquities. At the time, I wanted to be Indiana Jones, I mean an Archeologist."
-        },
-        {
-            "title":"August 2007",
-            "body": "Joined the US Navy. I saw how expensive college was after 1 year and needed to find a way to get it paid for. I figured with the Navy, in the worst-case scenario I would be living by the beach. That's a pretty good worst-case scenario for a kid from the midwest."
-        },
-        {
-            "title": "December 2008",
-            "body": "Finished school in the Navy and arrived at my first command, NCTAMS LANT det Rota, Spain. I was immediately put in charge of the maintenance of their $2+ million SHF SATCOM system."
-        },
-        {
-            "title": "May 2010",
-            "body": "Awarded a Letter of Commendation for demonstrating superior technical ability during the decommissioning of the SHF SATCOM system in Rota, Spain"
-        },
-        {
-            "title": "June 2010",
-            "body": "Promoted from Electronics Technician 3rd Class to 2nd Class. At the time, this promotion typically took 4 - 6 years to attain. I achieved it in less than 3 years."
-        },
-        {
-            "title": "December 2011",
-            "body": "Awarded the Navy Achievement Medal for my overall body of work during my 3 years in Rota, Spain."
-        },
-        {
-            "title": "January 2012",
-            "body": "Reported to my new command, the ship HSV-2 Swift based in Norfolk, VA. I was the Electronics Material Officer, a position normally held by an officer 6 paygrades higher than what I was at the time. I was also the Maintenance Coordinator of the Ship, this position is normally held by someone 4 paygrades higher than what I was."
-        },
-        {
-            "title": "January 2013",
-            "body": "Again awarded the Navy Achievement Medal for professional achievement in support of two 4 month deployments onboard the HSV-2 Swift."
-        },
-        {
-            "title": "May 2013",
-            "body": "Finished my service in the United States Navy and headed to Tempe, AZ to attend Arizona State University."
-        },
-        {
-            "title": "August 2013",
-            "body": "Restarted college at Arizona State University studying Electrical Engineering."
-        },
-        {
-            "title": "January 2014",
-            "body": "My first introduction into computer programming, Introduction to C++. I like it and decide to concentrate on Digital Signal Processing where I can use both electrical engineering and computer programming."
-        },
-        {
-            "title": "May 2015",
-            "body": "Received an internship at General Dynamics as a Test Engineer. This was my first programming job. I worked on production test software in LabView. I mainly worked with encryption devices for the Military."
-        },
-        {
-            "title": "May 2016",
-            "body": "Received my second internship at General Dynamics, this time as a Systems Engineer for a program called Rescue-21. Rescue-21 is the Search and Rescue radio system employed by the US Coast Guard. I worked on improving the trouble ticket system the engineering department used to deal with outages across the nation."
-        },
-        {
-            "title": "July 2016",
-            "body": "Received a full-time job offer from General Dynamics to work on the Mayer Program for the following summer. In exchange for the early offer, I agreed to intern with the program during my senior year of college. I worked with the production test software of a software-defined radio. I also worked on a communications receiver that was implemented as a desktop application for Windows."
-        },
-        {
-            "title": "September 2019",
-            "body": "Took a job working with Agjunction as an embedded software engineer. AgJunction builds auto-steering systems for tractors. Auto-steering is like self-driving but no engine or brake controls."
-        },
-        {
-            "title": "June 2020",
-            "body": "Became the software lead of the Polaris project at Agjunction. Polaris is the name for the project that will build the software and controls platform for all future projects at Agjunction."
-        },
-        {
-            "title": "January 2021",
-            "body": "Started work on what became Booki, the fantasy sports betting app."
-        },
-        {
-            "title": "March 2021",
-            "body": "Moved to the Los Angeles area for personal reasons, as a result of this move, I started a new position as a Senior Software Engineer with Black Key Software as a contractor for NASA at the Jet Propulsion Laboratory."
-        },
-        {
-            "title": "September 2021",
-            "body": "JPL was not able to renew the contract I was working under for FY2022, therefore my employment with Black Key Software was terminated on 09/23/2022. Let the job search begin, luckily the job market at this time was extremely hot."
-        },
-        {
-            "title": "November 2021",
-            "body": "I was hired by Lucidworks to be a Software Engineer for their Cloud Platform Team. This is a fully remote position working on Kubernetes and web applications."
-        }
-    ]
+  "items": [
+    {
+      "title": "May 2006",
+      "body": "Graduated from Moberly High School in Moberly, MO"
+    },
+    {
+      "title": "August 2006",
+      "body": "Started college at Missouri State University. I started out majoring in Chemistry then quickly changed my major to Antiquities. At the time, I wanted to be Indiana Jones, I mean an Archeologist."
+    },
+    {
+      "title": "August 2007",
+      "body": "Joined the US Navy. I saw how expensive college was after 1 year and needed to find a way to get it paid for. I figured with the Navy, in the worst-case scenario I would be living by the beach. That's a pretty good worst-case scenario for a kid from the midwest."
+    },
+    {
+      "title": "December 2008",
+      "body": "Finished school in the Navy and arrived at my first command, NCTAMS LANT det Rota, Spain. I was immediately put in charge of the maintenance of their $2+ million SHF SATCOM system."
+    },
+    {
+      "title": "May 2010",
+      "body": "Awarded a Letter of Commendation for demonstrating superior technical ability during the decommissioning of the SHF SATCOM system in Rota, Spain"
+    },
+    {
+      "title": "June 2010",
+      "body": "Promoted from Electronics Technician 3rd Class to 2nd Class. At the time, this promotion typically took 4 - 6 years to attain. I achieved it in less than 3 years."
+    },
+    {
+      "title": "December 2011",
+      "body": "Awarded the Navy Achievement Medal for my overall body of work during my 3 years in Rota, Spain."
+    },
+    {
+      "title": "January 2012",
+      "body": "Reported to my new command, the ship HSV-2 Swift based in Norfolk, VA. I was the Electronics Material Officer, a position normally held by an officer 6 paygrades higher than what I was at the time. I was also the Maintenance Coordinator of the Ship, this position is normally held by someone 4 paygrades higher than what I was."
+    },
+    {
+      "title": "January 2013",
+      "body": "Again awarded the Navy Achievement Medal for professional achievement in support of two 4 month deployments onboard the HSV-2 Swift."
+    },
+    {
+      "title": "May 2013",
+      "body": "Finished my service in the United States Navy and headed to Tempe, AZ to attend Arizona State University."
+    },
+    {
+      "title": "August 2013",
+      "body": "Restarted college at Arizona State University studying Electrical Engineering."
+    },
+    {
+      "title": "January 2014",
+      "body": "My first introduction into computer programming, Introduction to C++. I like it and decide to concentrate on Digital Signal Processing where I can use both electrical engineering and computer programming."
+    },
+    {
+      "title": "May 2015",
+      "body": "Received an internship at General Dynamics as a Test Engineer. This was my first programming job. I worked on production test software in LabView. I mainly worked with encryption devices for the Military."
+    },
+    {
+      "title": "May 2016",
+      "body": "Received my second internship at General Dynamics, this time as a Systems Engineer for a program called Rescue-21. Rescue-21 is the Search and Rescue radio system employed by the US Coast Guard. I worked on improving the trouble ticket system the engineering department used to deal with outages across the nation."
+    },
+    {
+      "title": "July 2016",
+      "body": "Received a full-time job offer from General Dynamics to work on the Mayer Program for the following summer. In exchange for the early offer, I agreed to intern with the program during my senior year of college. I worked with the production test software of a software-defined radio. I also worked on a communications receiver that was implemented as a desktop application for Windows."
+    },
+    {
+      "title": "September 2019",
+      "body": "Took a job working with Agjunction as an embedded software engineer. AgJunction builds auto-steering systems for tractors. Auto-steering is like self-driving but no engine or brake controls."
+    },
+    {
+      "title": "June 2020",
+      "body": "Became the software lead of the Polaris project at Agjunction. Polaris is the name for the project that will build the software and controls platform for all future projects at Agjunction."
+    },
+    {
+      "title": "January 2021",
+      "body": "Started work on what became Booki, the fantasy sports betting app."
+    },
+    {
+      "title": "March 2021",
+      "body": "Moved to the Los Angeles area for personal reasons, as a result of this move, I started a new position as a Senior Software Engineer with Black Key Software as a contractor for NASA at the Jet Propulsion Laboratory."
+    },
+    {
+      "title": "September 2021",
+      "body": "JPL was not able to renew the contract I was working under for FY2022, therefore my employment with Black Key Software was terminated on 09/23/2022. Let the job search begin, luckily the job market at this time was extremely hot."
+    },
+    {
+      "title": "November 2021",
+      "body": "I was hired by Lucidworks to be a Software Engineer for their Cloud Platform Team. This is a fully remote position working on Kubernetes and web applications."
+    },
+    {
+      "title": "September 2022",
+      "body": "I was layed off from Lucidworks due to a strategic pivot away from the Cloud Platform I was hired to work on."
+    },
+    {
+      "title": "November 2023",
+      "body": "I started a new position as a Sr. Software Engineer with SIBI to work on their Partner Integration Team."
+    }
+  ]
 }
