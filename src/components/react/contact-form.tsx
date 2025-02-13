@@ -152,7 +152,7 @@ async function contactFormSubmit(
   console.log("sending email to api");
   let baseurl = "https://api.trcarney.com/";
   if (stage !== "prod") {
-    baseurl += "dev/";
+    baseurl = "https://devapi.trcarney.com/";
   }
 
   const url = baseurl + "contact";

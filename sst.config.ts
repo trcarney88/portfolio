@@ -23,10 +23,11 @@ export default $config({
       },
     });
 
+    const apiUrl =
+      $app.stage !== "prod" ? "devapi.trcarney.com" : "api.trcarney.com";
     const api = new sst.aws.ApiGatewayV2("PortfolioApi", {
       domain: {
-        name: "api.trcarney.com",
-        path: $app.stage !== "prod" ? "dev" : "",
+        name: apiUrl,
       },
     });
 
