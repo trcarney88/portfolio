@@ -11,7 +11,7 @@ export default $config({
   },
   async run() {
     const domainName =
-      $app.stage === "prod" ? "trcanrey.com" : "dev.trcarney.com";
+      $app.stage === "prod" ? "trcarney.com" : "dev.trcarney.com";
     const domainRedirect =
       $app.stage === "prod" ? "www.trcarney.com" : "www.dev.trcarney.com";
 
@@ -21,10 +21,16 @@ export default $config({
         name: domainName,
         redirects: [domainRedirect],
       },
+      server: {
+        install: ["sharp"],
+        architecture: "arm64",
+        memory: "2048 MB",
+        runtime: "nodejs20.x",
+      },
     });
 
     const apiUrl =
-      $app.stage !== "prod" ? "devapi.trcarney.com" : "api.trcarney.com";
+      $app.stage === "prod" ? "api.trcarney.com" : "devapi.trcarney.com";
     const api = new sst.aws.ApiGatewayV2("PortfolioApi", {
       domain: {
         name: apiUrl,
