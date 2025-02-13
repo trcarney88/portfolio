@@ -12,13 +12,13 @@ There is one API endpoint
 
 ### Links
 
-(Astro)[https://astro.build/]
+[Astro](https://astro.build/)
 
-(SST)[https://sst.dev/]
+[SST](https://sst.dev/)
 
-(Tailwind UI)[https://tailwindui.com/components]
+[Tailwind UI](https://tailwindui.com/components)
 
-(Tailwind CSS)[https://tailwindcss.com/]
+[Tailwind CSS](https://tailwindcss.com/)
 
 ### Deploying
 
