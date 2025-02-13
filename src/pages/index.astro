@@ -1,0 +1,110 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "layouts/Layout.astro";
+import BlogPreview from "components/astro/BlogPreview.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout title="Home" description="Todd Carney's Personal Site">
+  <div
+    class="absolute inset-x-0 -top-80 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+    aria-hidden="true"
+  >
+    <div
+      class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-primary to-seconday opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    >
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <div class="max-w-[2000px] px-4 md:px-8 py-12 sm:py-24 lg:py-32">
+      <div class="h-auto mx-auto max-w-4xl md:mb-8">
+        <div class="text-center">
+          <h1
+            class="text-5xl text-gray-300 tracking-tight text-balance sm:text-9xl"
+          >
+            Todd Carney
+          </h1>
+          <p
+            class="my-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8"
+          >
+            Software Engineer
+          </p>
+        </div>
+        <div class="max-md:hidden mb-16 h-25 justify-center inline-flex">
+          <img
+            class="p-4"
+            src="/icons/astro-logo.png"
+            alt="Logo for the Astro JS Framework"
+          />
+          <img class="p-4" src="/icons/ts-logo.png" alt="Logo for TypeScript" />
+          <img class="p-4" src="/icons/go-logo.png" alt="Logo for Golang" />
+          <img class="p-4" src="/icons/sst-logo.svg" alt="Logo for SST" />
+          <img class="p-4" src="/icons/aws-logo.png" alt="Logo for AWS" />
+          <img
+            class="p-4"
+            src="/icons/flutter-logo.svg"
+            alt="Logo for Flutter"
+          />
+        </div>
+        <div
+          class="md:hidden h-auto justify-center inline-grid grid-cols-3 gap-2 gap-y-4 items-center"
+        >
+          <img class="p-4" src="/icons/ts-logo.png" alt="Logo for TypeScript" />
+          <img
+            class="p-4"
+            src="/icons/flutter-logo.svg"
+            alt="Logo for Flutter"
+          />
+          <img
+            class="p-4"
+            src="/icons/astro-logo.png"
+            alt="Logo for the Astro JS Framework"
+          />
+          <img class="p-4" src="/icons/go-logo.png" alt="Logo for Golang" />
+          <img class="p-4" src="/icons/sst-logo.svg" alt="Logo for SST" />
+          <img class="p-4" src="/icons/aws-logo.png" alt="Logo for AWS" />
+        </div>
+      </div>
+      <hr class="h-px bg-gray-700 border-0" />
+      <div class="pt-16 md:pt-8">
+        <a href="/blog" class="text-3xl md:text-5xl text-primary">
+          Recent Blogs
+        </a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 py-8">
+          {
+            posts.map((post, i) => {
+              if (i > 2) {
+                return;
+              }
+
+              return (
+                <a href={`/blog/${post.id}`}>
+                  <BlogPreview
+                    image={post.data.heroImage}
+                    title={post.data.title}
+                    pubDate={post.data.pubDate}
+                  />
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+    aria-hidden="true"
+  >
+    <div
+      class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-primary to-secondary opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    >
+    </div>
+  </div>
+</Layout>

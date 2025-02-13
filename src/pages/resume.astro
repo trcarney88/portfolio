@@ -1,0 +1,63 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "layouts/Layout.astro";
+import { ResumeButton } from "components/react/resume-button";
+import CompanyCard from "components/astro/CompanyCard.astro";
+import Prose from "components/astro/prose.astro";
+
+const work = (await getCollection("work")).sort(
+  (a, b) =>
+    new Date(b.data.startDate).valueOf() - new Date(a.data.startDate).valueOf(),
+);
+---
+
+<Layout title="Resume" description="Todd Carney's Resume and Work History">
+<div class="flex justify-center">
+  <div class="justify-center max-w-[1500px]">
+    <div class="text-center py-8 md:py-16">
+      <span class="inline-flex items-center">
+        <h1 class="text-4xl px-4 text-gray-300">Resume</h1>
+        <ResumeButton />
+      </span>
+    </div>
+    <div class="h-auto w-full p-4">
+      {
+        work.map(async (item, i) => {
+          const { Content } = await render(item);
+          return (
+            <div class="items-center grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 py-8">
+              <CompanyCard input={{ ...item.data }} />
+              <div class="md:col-span-2 text-gray-300">
+                <Prose>
+                  <Content />
+                </Prose>
+                <div class="max-md:hidden py-8 inline-flex flex-wrap">
+                  {
+                    item.data.tags?.map((tag, i) =>{
+                      return (
+                      <p class="bg-secondary rounded-lg text-lg text-gray-300 p-2 px-2 mr-2">{tag}</p>
+                      )
+                    })
+                  }
+                </div>
+                <div class="md:hidden w-full inline-flex flex-wrap justify-center">
+                  {
+                    item.data.tags?.map((tag, i) =>{
+                      if (i > 2) {
+                        return
+                      }
+                      return (
+                        <p class="bg-secondary rounded-lg text-gray-300 p-2 m-2">{tag}</p>
+                      )
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+            <hr class={"h-px bg-gray-700 border-0" + (i === work.length - 1 ? " hidden" : "")} />
+          );
+        })
+      }
+  </div>
+  </div>
+</Layout>

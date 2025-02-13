@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "layouts/Layout.astro";
+import Prose from "components/astro/prose.astro";
+
+type Props = CollectionEntry<"projects">["data"];
+
+const { title, subtitle, tags, date, image } = Astro.props;
+---
+
+<Layout title={title} description="Todd Carney's Personal Site: Blog">
+  <main class="md:p-4 py-8 w-full max-w-full m-0">
+    <div class="flex justify-center">
+      <article class="max-w-[1500px] w-full">
+        <div class="text-gray-300 px-2 md:px-24">
+          <div class="text-center leading-none mb-4 py-4">
+            <div class="mt-0 mb-2 mx-0">
+              <time
+                class="text-gray-500"
+                datetime={new Date(date).toISOString()}
+              >
+                {
+                  new Date(date).toLocaleDateString("en-us", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })
+                }
+              </time>
+            </div>
+            <h1 class="text-3xl md:text-5xl mt-0 mb-2 mx-0 pb-2">
+              {title}
+            </h1>
+            {
+              subtitle && (
+                <h3 class="text-xl md:text-2xl text-primary mt-0 mb-2 mx-0 pb-4">
+                  {subtitle}
+                </h3>
+              )
+            }
+            <hr />
+            <div class="md:py-8 inline-flex flex-wrap justify-center">
+              {
+                tags?.map((tag) => {
+                  return (
+                    <p class="bg-secondary rounded-lg md:text-lg text-gray-300 p-2 md:px-2 m-2 md:mx-2">
+                      {tag}
+                    </p>
+                  );
+                })
+              }
+            </div>
+          </div>
+          <Prose>
+            <slot />
+          </Prose>
+        </div>
+        <div class="flex justify-center md:py-16 md:px-32 max-md:py-4 w-full">
+          {
+            image && (
+              <img
+                class="block shadow-gray-500 my-0 rounded-xl"
+                width={2000}
+                height={510}
+                src={image}
+                alt=""
+              />
+            )
+          }
+        </div>
+      </article>
+    </div>
+  </main>
+</Layout>

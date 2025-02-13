@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "layouts/Layout.astro";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+export const prerender = true;
+---
+
+<Layout title="Projects" description="Todd Carney's Projects">
+  <div class="flex justify-center">
+    <section
+      class="p-4 max-md:pt-12 md:p-16 max-w-[2000px] w-full justify-center text-center"
+    >
+      <h1 class="text-3xl md:text-5xl text-gray-300 pb-8 md:pb-16">Projects</h1>
+      <ul class="flex flex-wrap gap-8 list-none m-0 p-0">
+        {
+          projects.map((project) => (
+            <li class="w-full text-center first:mb-4 trasition-[0.2s] duration-[ease]">
+              <a class="block" href={`/projects/${project.id}/`}>
+                <div class="flex justify-center">
+                  <img
+                    class="w-full md:h-150 md:w-auto mb-2 rounded-xl hover: shadow-gray-600"
+                    width={720}
+                    height={360}
+                    src={project.data.image}
+                    alt=""
+                  />
+                </div>
+                <h2 class="text-2xl text-primary leading-none m-0 hover:text-secondary">
+                  {project.data.title}
+                </h2>
+                <time
+                  class="text-lg text-gray-400 m-0 hover:text-secondary"
+                  datetime={new Date(project.data.date).toISOString()}
+                >
+                  {new Date(project.data.date).toLocaleDateString("en-us", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </time>
+              </a>
+              <div class="md:py-4 inline-flex flex-wrap justify-center">
+                {project.data.tags?.map((tag, i) => {
+                  return (
+                    <p
+                      class={
+                        "bg-secondary rounded-lg md:text-lg text-gray-300 p-2 md:px-2 m-2 md:mx-2" +
+                        (i > 2 ? " max-md:hidden" : "")
+                      }
+                    >
+                      {tag}
+                    </p>
+                  );
+                })}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</Layout>

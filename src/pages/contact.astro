@@ -1,0 +1,11 @@
+---
+import Layout from "layouts/Layout.astro";
+import { ContactForm } from "components/react/contact-form";
+import { Resource } from "sst";
+
+const stage = import.meta.env.DEV ? "dev" : Resource.App.stage;
+---
+
+<Layout title="Contact" description="Contact Todd Carney">
+  <ContactForm stage={stage} client:idle />
+</Layout>

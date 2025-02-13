@@ -1,0 +1,21 @@
+---
+interface Props {
+  side: "left" | "right";
+  title: string;
+  body: string;
+}
+
+const { side, title, body } = Astro.props;
+const styles = {
+  left: "relative w-full px-4 md:px-10 py-4 first:py-0 first:pb-4 md:py-2.5 md:w-[50%] md:left-0",
+  right:
+    "relative w-full px-4 md:px-10 py-4 md:py-2.5 md:w-[50%] md:left-[50%]",
+};
+---
+
+<div class={styles[side]}>
+  <div class="bg-gray-700 relative px-8 py-5 rounded-md">
+    <h2 class="text-primary text-2xl font-bold">{title}</h2>
+    <p class="text-justify text-pretty text-gray-300">{body}</p>
+  </div>
+</div>

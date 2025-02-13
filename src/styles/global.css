@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: Corinthia;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Corinthia/Corinthia-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Corinthia;
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/Corinthia/Corinthia-Bold.ttf") format("truetype");
+}
+
+@theme {
+  --font-corinthia: Corinthia, cursive;
+  --color-primary: #568ea3;
+  --color-secondary: #996888;
+  --color-action: #ad343e;
+}

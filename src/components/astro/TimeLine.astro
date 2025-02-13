@@ -1,0 +1,22 @@
+---
+import TimeLineElement from "./TimeLineElement.astro";
+import data from "content/timeline.json";
+
+const timelineItems: { title: string; body: string }[] = data.items;
+---
+
+<div
+  class="relative max-w-[1200px] m-auto md:after:bg-gray-700 md:after:absolute md:after:w-2 md:after:top-0 md:after:bottom-0 md:after:left-[50%] md:after:-m-3"
+>
+  {
+    timelineItems.map((item, i) => {
+      let side: "left" | "right" = "right";
+      if (i % 2 === 0) {
+        side = "left";
+      }
+      return (
+        <TimeLineElement side={side} title={item.title} body={item.body} />
+      );
+    })
+  }
+</div>
