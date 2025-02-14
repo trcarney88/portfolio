@@ -12,6 +12,45 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <main class="md:p-4 py-8 w-full max-w-full m-0">
     <div class="flex justify-center">
       <article class="max-w-[1500px] w-full">
+        <div class="text-center leading-none mb-4">
+          <div class="pt-16 md:px-32 text-center">
+            <h1
+              class="text-gray-300 text-pretty text-3xl md:text-5xl mt-0 mb-2 mx-0"
+            >
+              {title}
+            </h1>
+          </div>
+          <div class="mt-0 mb-2 mx-0">
+            <time
+              class="text-gray-500"
+              datetime={new Date(pubDate).toISOString()}
+            >
+              {
+                new Date(pubDate).toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })
+              }
+            </time>
+            {
+              updatedDate && (
+                <div class="italic">
+                  Last updated on{" "}
+                  <time datetime={new Date(updatedDate).toISOString()}>
+                    {" "}
+                    date=
+                    {new Date(updatedDate).toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}{" "}
+                  </time>
+                </div>
+              )
+            }
+          </div>
+        </div>
         <div class="flex justify-center md:py-16 md:px-8 max-md:py-4 w-full">
           {
             heroImage && (
@@ -25,41 +64,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             )
           }
         </div>
-        <div class="text-gray-300 px-4 md:px-24">
-          <div class="text-center leading-none mb-4 py-4">
-            <div class="mt-0 mb-2 mx-0">
-              <time
-                class="text-gray-500"
-                datetime={new Date(pubDate).toISOString()}
-              >
-                {
-                  new Date(pubDate).toLocaleDateString("en-us", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })
-                }
-              </time>
-              {
-                updatedDate && (
-                  <div class="italic">
-                    Last updated on{" "}
-                    <time datetime={new Date(updatedDate).toISOString()}>
-                      {" "}
-                      date=
-                      {new Date(updatedDate).toLocaleDateString("en-us", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}{" "}
-                    </time>
-                  </div>
-                )
-              }
-            </div>
-            <h1 class="text-3xl md:text-5xl mt-0 mb-2 mx-0">{title}</h1>
-            <hr />
-          </div>
+        <hr />
+        <div class="text-gray-300 py-8 px-4 md:px-24">
           <Prose>
             <slot />
           </Prose>
