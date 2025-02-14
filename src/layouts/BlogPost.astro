@@ -5,10 +5,16 @@ import Prose from "components/astro/prose.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, imageAlt } =
+  Astro.props;
 ---
 
-<Layout title={title} description="Todd Carney's Personal Site: Blog">
+<Layout
+  title={title}
+  description="Todd Carney's Personal Site: Blog"
+  image={heroImage}
+  imageAlt={imageAlt}
+>
   <main class="md:p-4 py-8 w-full max-w-full m-0">
     <div class="flex justify-center">
       <article class="max-w-[1500px] w-full">

@@ -3,6 +3,7 @@ title: 'Product vs Engineering: How to manage an antagonistic relationship'
 description: 'The Product and Engineering departments at an sufficiently sized company will naturally be somewhat antagonistic towards each other. This is beacuse engineering generally want to refine and optimize their systems and Product was to add more and more features. Too much power has been given to the Product department and this has led to the general enshitification of the internet. It is time to engineering to push back and start fixing their shit.'
 pubDate: 'Feb 13 2025'
 heroImage: '/blog/product-vs-engineer.webp'
+imageAlt: 'Product Manager and engineer arguing'
 ---
 
 In any software company, two fundamental forces battle to drive progress: Product and Engineering.
