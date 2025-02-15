@@ -1,7 +1,6 @@
 ---
 title: 'Product vs Engineering: How to manage an antagonistic relationship'
-description: 'The Product and Engineering departments at an sufficiently sized company will naturally be somewhat antagonistic towards each other. This is beacuse engineering generally want to refine and optimize their systems and Product was to add more and more features. Too much power has been given to the Product department and this has led to the general enshitification of the internet. It is time to engineering to push back and start fixing their shit.'
-pubDate: 'Feb 13 2025'
+description: 'The Product and Engineering departments at a sufficiently sized company will naturally be somewhat antagonistic towards each other. This is because Engineering generally wants to refine and optimize their systems, and Product wants to add more and more features. Too much power has been given to the Product department and this has led to the general enshitification of the internet. It is time to engineering to push back and start fixing their shit.'
 heroImage: '/blog/product-vs-engineer.webp'
 imageAlt: 'Product Manager and engineer arguing'
 ---
@@ -79,7 +78,7 @@ improve reliability, show how it will reduce downtime or support scalability for
 
 If you can get away with it just do the work even if it isn't being prioritized. This has been my
 best way of getting performance and DX improvements through when I've had Product Managers who refused
-to prioritize it. Just hit your PM wiht a Primagen "YAYAYAYAYAYA" to what ever work they want to
+to prioritize it. Just hit your PM with a Primagen "YAYAYAYAYAYA" to what ever work they want to
 assign you and then go work on whatever you think is broken. You have to be careful with this one and
 pick your battles because it could backfire pretty easily. You also have to know your organization,
 some would not put up with this too many times.
@@ -89,7 +88,7 @@ some would not put up with this too many times.
 As Alex Hormozi likes to point out for many problems, this isn't a problem to solve, it is a dichotomy
 to manage. Currently, this isn't being managed, engineers are just getting tasked with an increasing
 list of features to be delivered in ever shorter amounts of time. As a result, we are delivering
-shittier and shitter products to people. This has led to an internet that is more capable than ever
+shittier and shittier products to people. This has led to an internet that is more capable than ever
 but becoming more and more unusable.
 
 As an engineer, it’s important to push for the changes you believe in while understanding that
