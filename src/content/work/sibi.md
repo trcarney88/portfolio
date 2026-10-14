@@ -1,16 +1,8 @@
 ---
 company: "SIBI"
-location: "Gilber, AZ"
+location: "Gilbert, AZ"
 position: "Sr. Software Engineer"
-tags:
-  [
-    "Typescript",
-    "Serverless",
-    "SST",
-    "DynamoDB",
-    "EventBridge",
-    "AWS",
-  ]
+tags: ["Typescript", "Serverless", "SST", "DynamoDB", "EventBridge", "AWS"]
 startDate: "11/13/2022"
 image: "/work/sibi.png"
 ---
@@ -25,8 +17,8 @@ Engineers grow in their profession.
 After working on the team for a few months, I noticed that if we changed our
 archictecture we could greatly reduce the length of time it would take to integrate
 a new parnter. The architecture change I proposed was to create a set of "abstraction"
-services, i.e. orders-service, tracking-service, etc. These services would two
-definite interfaces, one for the parnter services to send data to and one to send/receive
+services, i.e. orders-service, tracking-service, etc. These services would have two
+definite interfaces, one for the parnter services to send data and one to send/receive
 data from the rest of the Sibi platform. This allowed us to turn the partner services
 into simple translation services that would convert "Partner" to "Sibi" and then send that
 data to the relevant abstraction service.
